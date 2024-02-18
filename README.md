@@ -15,5 +15,5 @@ $ openssl rsa -in private.key -out public.key -outform PEM -pubout
 
 ### OpenSSLコマンド
 - `openssl req`: https://www.openssl.org/docs/manmaster/man1/openssl-req.html
-- `openssl genrsa`: https://www.openssl.org/docs/manmaster/man1/genrsa.html
-- `openssl rsa`: https://www.openssl.org/docs/manmaster/man1/rsa.html
+- `openssl genrsa`: https://www.openssl.org/docs/manmaster/man1/openssl-genrsa.html
+- `openssl rsa`: https://www.openssl.org/docs/manmaster/man1/openssl-rsa.html
