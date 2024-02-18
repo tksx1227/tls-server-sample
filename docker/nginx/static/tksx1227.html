@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>tksx1227</title>
+    <style>
+        pre {
+            font-family: 'Courier New', Courier, monospace; /* monospace font for equal character widths */
+            white-space: pre-wrap; /* respects white spaces */
+            word-wrap: break-word; /* wrap long words */
+            letter-spacing: -1px; /* reduce letter spacing */
+            line-height: 0.6em; /* reduce line height */
+        }
+    </style>
+</head>
+<body>
+    <pre id="ascii-art-container">
+    </pre>
+    <script>
+        // ASCIIアートをテキストファイルから読み込む
+        fetch('ascii_art.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('ascii-art-container').textContent = data;
+            });
+    </script>
+</body>
+</html>
