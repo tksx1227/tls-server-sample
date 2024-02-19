@@ -12,7 +12,12 @@ $ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
 
 ## 自己署名証明書生成
 ```bash
-$ openssl req -new -x509 -key private.pem -out server.crt -days 365 -outform PEM -config csr.conf
+$ openssl req -new -x509 -key private.pem -out server.crt -days 365 -outform PEM -config crt.conf
+```
+
+## 証明書から公開鍵を取り出す
+```bash
+$ openssl x509 -in server.crt -pubkey
 ```
 
 ## 参考
@@ -22,3 +27,6 @@ $ openssl req -new -x509 -key private.pem -out server.crt -days 365 -outform PEM
 - `openssl req`: https://www.openssl.org/docs/manmaster/man1/openssl-req.html
 - `openssl genrsa`: https://www.openssl.org/docs/manmaster/man1/openssl-genrsa.html
 - `openssl rsa`: https://www.openssl.org/docs/manmaster/man1/openssl-rsa.html
+
+### その他リンク
+ - Chrome公認のルート証明書一覧: https://chromium.googlesource.com/chromium/src/+/main/net/data/ssl/chrome_root_store/root_store.md
