@@ -20,6 +20,11 @@ $ openssl req -new -x509 -key private.pem -out server.crt -days 365 -outform PEM
 $ openssl x509 -in server.crt -pubkey
 ```
 
+## 証明書をデコードする
+```bash
+$ openssl x509 -in server.crt -text -noout
+```
+
 ## 参考
 参考リンクなど
 
