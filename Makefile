@@ -2,7 +2,8 @@ IMAGE_NAME := tls-sample-server
 DOCKERFILE_PATH := docker/Dockerfile
 CONTEXT_DIR := docker/
 CONTAINER_NAME := tls-sample-server
-HOST_PORT := 8080
+HOST_HTTP_PORT := 8080
+HOST_HTTPS_PORT := 8443
 
 .PHONY: all
 all: docker/run
@@ -13,7 +14,7 @@ docker/build:
 
 .PHONY: docker/run
 docker/run:
-	docker run --name ${CONTAINER_NAME} -p ${HOST_PORT}:80 -d ${IMAGE_NAME}
+	docker run --name ${CONTAINER_NAME} -p ${HOST_HTTPS_PORT}:443 -p ${HOST_HTTP_PORT}:80 -d ${IMAGE_NAME}
 
 .PHONY: docker/stop
 docker/stop:
