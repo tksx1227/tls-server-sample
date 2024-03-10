@@ -46,6 +46,6 @@ openssl/private:
 openssl/public:
 	openssl rsa -in ${PRIVATE_KEY_PATH} -out ${PUBLIC_KEY_PATH} -outform PEM -pubout
 
-.PHONY: openssl/x509
-openssl/x509:
+.PHONY: openssl/crt
+openssl/crt:
 	openssl reeq -new -x509 -key ${PRIVATE_KEY_PATH} -out ${CERTIFICATION_PATH} -days 365 -outform PEM -config ${CERTIFICATION_CONFIG_PATH}
