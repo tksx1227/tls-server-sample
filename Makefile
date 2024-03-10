@@ -48,4 +48,4 @@ openssl/public:
 
 .PHONY: openssl/crt
 openssl/crt:
-	openssl reeq -new -x509 -key ${PRIVATE_KEY_PATH} -out ${CERTIFICATION_PATH} -days 365 -outform PEM -config ${CERTIFICATION_CONFIG_PATH}
+	openssl req -new -x509 -key ${PRIVATE_KEY_PATH} -out ${CERTIFICATION_PATH} -days 365 -outform PEM -config ${CERTIFICATION_CONFIG_PATH}
